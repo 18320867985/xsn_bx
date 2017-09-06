@@ -1,0 +1,534 @@
+
+/*****首页******/
+
+//头部
+.index-header.mui-bar{
+  
+   input[type='search'] {
+       
+        font-size: 14px;
+        
+         background: @text-ash-2;
+    }
+    
+   
+}
+
+.index {
+    //轮播图
+    .mui-slider {
+        img {
+            min-height: 200px;
+            max-height: 300px;
+        }
+        //轮播图片圆点
+        .mui-indicator {
+            width: 10px;
+            height: 10px;
+         
+            &+.mui-indicator {
+                margin-left: -3px;
+            }
+        }
+        //选择的样式
+        .mui-indicator.mui-active {}
+    }
+}
+
+//二级导航
+.index-nav {
+    width: 100%;
+    height: 50px !important;
+    padding: 0 10px;
+    background: #fff !important;
+    .mui-scroll {}
+    .mui-control-item {
+        padding: 0 5px !important;
+        line-height: 50px !important;
+        font-size: 14px !important;
+    }
+    //选中样式
+    .mui-control-item.mui-active {
+        color: @text-danger !important; //字体颜色
+        border-bottom: none !important;
+    }
+    .mui-control-item+.mui-control-item:before {
+        content: '|';
+        padding-right: 5px;
+        color: @text-ash-3;
+        font-weight: 200;
+        font-size: 14px;
+    }
+}
+
+//今日上市
+.index-new {
+   
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #fff;
+    .mui-col-xs-3 {
+        padding: 10px 10px;
+        text-align: center;
+        img {
+            max-width: 90%;
+            height: auto;
+        }
+        h5 {
+            text-align: center;
+            margin-top: 10px;
+            font-family: "微软雅黑";
+            font-weight: 600;
+            color: #777;
+        }
+    }
+}
+
+//编辑精选
+.index-jx {
+    li {
+        position: relative;
+        padding: 10px 5px !important;
+    }
+    .mui-table-view img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .item {
+        position: relative !important;
+    }
+    //上层数字
+    .item-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 10%;
+        width: 100%;
+        height: 100%;
+        background: rgba(54, 54, 54, .3);
+        font-weight: bold;
+        h4,
+        h5 {
+            text-align: center;
+            color: #fff;
+        }
+        ;
+        h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        h5 {
+            font-size: 14px;
+        }
+    }
+}
+
+//编辑精选ttl
+.index-jx-ttl {
+    margin-top: 10px;
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 10px 0 30px;
+    background: @text-white;
+    i {
+        position: absolute;
+        top: 25px;
+        left: 0px;
+        display: block;
+        height: 10px;
+        width: 20px;
+        background: @text-danger;
+    }
+    h4 {
+        margin: 0;
+        height: 60px;
+        line-height: 60px;
+        font-size: 16px;
+        font-weight: 200;
+        color: @text-base;
+    }
+    ;
+    a {
+        color: @text-base;
+    }
+}
+
+//编辑精选
+.index-jx-img {
+    width: 100%;
+    min-height: 200px;
+    max-height: 300px;
+}
+
+//百度百科
+.index-jx-bk {
+    margin-top: -5px;
+    padding: 5px 10px;
+    background: @text-white;
+    .bkgm {
+        margin-bottom: 5px;
+    }
+    h4 {
+        font-size: 16px;
+        color: @text-777;
+        font-weight: 200;
+    }
+    
+    button.btn {
+        height: 24px;
+        width: 90px;
+        padding: 0;
+        border: none;
+        line-height: 24px;
+        background: @text-danger;
+        border: 1px solid darken(@text-danger, 5%);
+        color: @text-white;
+        text-align: center;
+        &:hover {
+            background: darken(@text-danger, 10%);
+        }
+    }
+    p {
+        height: 24px;
+        overflow: hidden;
+        line-height: 24px;
+        text-indent: 20px;
+    }
+}
+
+//热卖爆款
+.index-jm {
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 10px 0 30px;
+    i {
+        position: absolute;
+        top: 25px;
+        left: 0px;
+        display: block;
+        height: 10px;
+        width: 20px;
+        background: @text-danger;
+    }
+    h4 {
+        margin: 0;
+        height: 60px;
+        line-height: 60px;
+        font-size: 16px;
+        color: @text-base;
+        font-weight: 200;
+    }
+    ;
+    a {
+        color: @text-base;
+    }
+}
+
+//热卖爆款图片列表 @media (max-width: 321px)
+.index-jb-list {
+   padding: 10px;
+   background: #fff;
+  
+    //每一项
+    .mui-col-xs-6 {
+        padding: 10px 5px;
+        margin-bottom: 10px;
+        margin-left: 1%;
+        width: 48%;
+        background: @text-white;
+        img {
+            width: 100%;
+          height: 150px;
+        }
+        //购买
+        .caption {
+            //单价
+            .dj {
+                padding: 5px 10px;
+            }
+            //p描述
+            .mui-ellipsis-2 {
+                height: 48px;
+                line-height: 24px;
+                overflow: hidden;
+            }
+            .txt {
+                display: inline-block;
+                float: left;
+                width: 24px;
+                height: 30px;
+                line-height: 30px;
+                padding: 0;
+                font-size: 12px;
+                color: @text-danger;
+                text-align: center;
+            }
+            .op {
+                position: relative;
+                display: inline-block;
+                float: left;
+                margin-left: 2px;
+                height: 30px;
+                width: 24px;
+                .minus,
+                .plus {
+                    position: absolute;
+                    width: 24px;
+                    height: 15px;
+                    line-height: 15px;
+                    text-align: center;
+                    color: @text-ash;
+                    border: 1px solid @text-ash;
+                    
+                     &:hover{
+                         color:@text-danger;
+                     }
+                }
+                 .plus{
+                    top: 0;
+                    left: 0;
+                    height: 16px;
+                    border-radius: 4px 4px 0 0;
+                }
+                .minus {
+                    top: 15px;
+                    left: 0;
+                    border-radius: 0 0 4px 4px;
+                }
+                .minus+.plus {
+                    border-top: none
+                }
+            }
+            //购物车
+            .shop {
+                float: left;
+                margin-left: 3px;
+                width: 24px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border: 1px solid @text-ash;
+                border-radius: 4px;
+                .icon-gouwuche {
+                    color: @text-danger;
+                    font-size: 15px;
+                }
+                &:hover {
+                    border: 1px solid @text-warning;
+                }
+            }
+            //立即购买
+            .gm {
+                float: right;
+                .btn {
+                    padding: 0;
+                    margin: 0;
+                    width: 62px;
+                    height: 28px;
+                    background: @text-danger;
+                    color: @text-white;
+                    border: 1px solid darken(@text-danger, 5%);
+                    
+                    transition: all .8;
+                    //active
+                    &:active{
+                       background: darken(@text-danger,15%); 
+                     
+                    }
+                }
+            }
+        }
+    }
+}
+
+//热卖爆款图片列表 @media (min-width: 400px)
+
+@media (min-width: 400px) {
+    .index-jb-list {
+       
+        //每一项
+        .mui-col-xs-6 {
+            padding: 10px 5px;
+            margin-bottom: 10px;
+            margin-left: 1%;
+            width: 48%;
+            background: @text-white;
+            img {
+                width: 100%;
+                height: 190px;
+            }
+            //购买
+            .caption {
+                //单价
+                .dj {
+                    padding: 5px 10px;
+                }
+                //p描述
+                .mui-ellipsis-2 {
+                    height: 48px;
+                    line-height: 24px;
+                    overflow: hidden;
+                }
+                .txt {
+                    display: inline-block;
+                    float: left;
+                    width: 28px;
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0;
+                    font-size: 12px;
+                    color: @text-danger;
+                    text-align: center;
+                }
+                .op {
+                    position: relative;
+                    display: inline-block;
+                    float: left;
+                    margin-left: 3px;
+                    height: 30px;
+                    width: 28px;
+                    .minus,
+                    .plus {
+                        position: absolute;
+                        width: 24px;
+                        height: 15px;
+                        line-height: 15px;
+                        text-align: center;
+                        color: @text-ash;
+                        border: 1px solid @text-ash;
+                    }
+                    
+                    
+                 .plus {
+                        top: 0;
+                        left: 0;
+                        height: 16px;
+                        border-radius: 4px 4px 0 0;
+                    }
+                      .minus{
+                        top: 15px;
+                        left: 0;
+                          line-height: 15px;
+                        border-radius: 0 0 4px 4px;
+                        vertical-align:baseline;
+                    }
+                    .minus+.plus {
+                        border-top: none
+                    }
+                }
+                //购物车
+                .shop {
+                    float: left;
+                    margin-left: 3px;
+                    width: 28px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    border: 1px solid @text-ash;
+                    border-radius: 4px;
+                    .icon-gouwuche {
+                        color: @text-danger;
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        border: 1px solid @text-warning;
+                    }
+                }
+                //立即购买
+                .gm {
+                    float: right;
+                    .btn {
+                        padding: 0;
+                        margin: 0;
+                        width: 70px;
+                        height: 28px;
+                        background: @text-danger;
+                        color: @text-white;
+                        border: 1px solid darken(@text-danger, 5%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//首页商品
+.index-item-cont{
+    
+   
+    margin-bottom: 10px;
+    padding: 10px;
+   
+     font-size:14px ;
+     background: #fff;
+    
+   
+    //图片
+    .img{
+        display: block;
+        float: left;
+        padding-left: 5px;
+        //width: 100px;
+        height: 150px;
+        
+      }
+    
+    //列表ul
+    .list{
+        display: block;
+        float: right;
+        margin: 0;
+        padding: 0 8px;
+         font-size:12px ;
+        h4
+        {
+            margin-bottom: 10px;
+            height: 40px;
+            line-height: 20px;
+            font-size:14px ;
+            color:@text-777;
+            font-weight: 200;
+        }
+      .iconfont{
+        margin-right: -3px;
+        font-size: 14px;
+      }
+      
+      .nums{
+          margin-top: 25px;
+          font-size: 14px;
+      }
+      
+     .btn-lj{
+         
+       .create-btn(@text-danger,24px,80px);
+        border-radius: 4px ;
+          
+      }
+     
+     
+}
+}
+
+
+//底部index-footer
+.index-footer{
+    
+    background: @text-white;
+    .mui-tab-item.mui-active{
+        color:@text-danger !important;
+    }
+    
+    //icon
+    .iconfont{font-size: 20px;
+        
+    }
+    
+    &.mui-bar.mui-bar-tab{
+     
+    }
+}
