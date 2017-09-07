@@ -1,17 +1,17 @@
 
 
-	mui.init({
-				swipeBack: true //启用右滑关闭功能
+	mui.init({	
+		swipeBack: true //启用右滑关闭功能
 	});
 
-//页脚链接跳转
+	//页脚链接跳转
 	$(".mui-bar.mui-bar-tab .mui-tab-item").on("tap", function() {
 			
 			window.location.href = $(this).attr("href");
 		
-		});
+	});
 	
-//
+
 ///*****置顶组件start*********/
 //	$(window).scroll(function(){
 //			
@@ -29,46 +29,4 @@
 //	});
 //	
 ///*****置顶组件end*********/
-//	
-//	
-//	
-//	/*****数字框组件start******/
-//	
-//		//minus
-//		$(".minus").on("tap",function(e){
-//				e.stopPropagation();
-//				e.preventDefault();
-//			var p=$(this).parents(".number");
-//			
-//			var v=parseInt($(".num",p).val());
-//				v=window.isNaN(v)?1:v;
-//				
-//				v=v>1?v-1:1;
-//				$(".num",p).val(v);
-//		
-//				//点击触发自定义事件
-//				$(this).trigger("number_click",[this]);
-//				
-//				
-//			});
-//			
-//		//plus
-//		$(".plus").on("tap",function(e){
-//				e.stopPropagation();
-//				e.preventDefault();
-//				var p=$(this).parents(".number");
-//		
-//				
-//				var v=parseInt($(".num",p).val());
-//					v=window.isNaN(v)?1:v;
-//					
-//					v=v+1;
-//				$(".num",p).val(v);
-//				
-//				//点击触发自定义事件
-//				$(this).trigger("number_click",[this]);
-//			
-//			
-//				});
-//		
-//	/*****数字框组件end******/
+	

@@ -168,7 +168,7 @@ gulp.task("t_ts", ["ts"],function () {
 });
 
 //编译es6
-gulp.task("es6", function () {
+gulp.task("t_es6", function () {
 	 gulp.src(paths.es6)
      .pipe(babel({
             presets: ['es2015']
@@ -238,6 +238,8 @@ gulp.task("watch",['connect'],function(){
 	//typescript文件
 	//gulp.watch(paths.typeScript,['t_ts']);
 	
+	//es6文件
+	gulp.watch(paths.es6,['t_es6']);
 	
 	//监听html
 	gulp.watch(paths.htmlPath,function(){

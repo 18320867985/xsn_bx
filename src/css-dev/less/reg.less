@@ -1,84 +1,109 @@
-/****注册******/
+/*注册页*/
 
-.reg {
+//列表项
+.reg-list {
     margin-top: 10px;
-    .reg-form {
-        padding: 5px 10px;
-        background: #fff;
-        label {
-            display: block;
-            height: 45px;
-            line-height: 45px;
-            width: 25%;
+    padding: 0 10px 0 20px;
+    background: #fff !important;
+    clear: both;
+    li {
+        position: relative;
+        padding: 10px 0;
+        @h: 34px;
+        label,
+        input {
+            display: inline-block;
             float: left;
-            padding-left: 10px;
-            font-size: 16px;
-        }
-        
-        .input-box{
-            position: relative;
-              width: 70%;
-               float: left;
-                 
-           //获取验证码
-          a.req-yzm{
-             position: absolute;
-             top:0;
-             right: -10px;
-            display: block;
-            height: 45px;
-            line-height: 45px;
-            width: 100px;
-            text-align: center;
+            height: @h;
             font-size: 14px;
-           
-            
-            border-left: 1px solid @text-ash-2 ;
-            color:@text-ash;
-            
-            //选择
-              &.mui-active{
-                  color: @text-susess;  
-              }
-           
-          }
+        }
+        label {
+            width: 20%;
+            line-height: @h;
         }
         input {
-            
-            height: 45px;
-            line-height: 45px;
-            
-            margin: 0 !important;
-            font-size: 16px;
+            width: 78%;
+            margin: 0;
             border: none;
         }
-        
-        //横线
-          .mui-row +.mui-row {
-              border-top:1px solid @text-ash-2;
-          } 
-          
-        
-          
-          
-          
-    }
-    //按钮
-    .reg-btn {
-        margin-top: 40px;
-        padding: 0 10px;
-        input {
-             .create-btn(@text-ash,48px,100%,0,16px);
+        .user {
+            width: 50%;
         }
-        
-        &.mui-active input{
-            
-            .create-btn(@text-danger,48px,100%,0,16px);
+        //获取验证码
+        .re-yzm {
+            position: absolute;
+            right: 5px;
+            top: 12px;
+            font-size: 12px !important;
+            @w: 90px;
+            //禁用
+            .create-btn(@text-ash, 28px, @w);
+            //激活     
+            &.active {
+                .create-btn(@text-warning, 28px, @w);
+            }
+        }
+        //相连的每一项
+        &+li {
+            padding-top: 10px;
+            border-top: 1px solid @text-ash-3;
         }
     }
 }
 
+//协议
+.reg-xy {
+    padding: 10px;
+    input[type='checkbox']:checked:before {
+        color: @text-success;
+    }
+}
 
+//提交按钮
+.reg-submit {
+    padding: 10px;
+    //默认的
+    .btn {
+        .create-btn(@text-ash, 40px, 100%);
+        font-size: 16px;
+        transition: all .8s;
+    }
+    //激活的
+    .active.btn {
+        .create-btn(@text-warning, 40px, 100%);
+        font-size: 16px;
+    }
+}
 
-
-
+//error错误
+.reg-error {
+    position: relative;
+    display: none;
+    padding: 0 10px;
+    transition:  all .5s;
+    .error {
+        padding: 0;
+        color: @text-warning;
+        background: #fff;
+        border: 1px solid @text-warning;
+        .icon-cuowu1 {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            margin-left: 15px;
+            font-size: 24px;
+            vertical-align: top;
+        }
+        .error-txt {
+            margin-left: 35px;
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+    
+    //是否显示错误框
+    &.is-show{
+        display:block;
+        transition:  all .8s;
+    }
+}

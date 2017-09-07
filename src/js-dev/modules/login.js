@@ -1,61 +1,42 @@
+var login = (function($) {
 
+	var _init = function() {
 		
-		
-login=(function($){
+
+		//change 验证
+		$(".login-list input").on("keyup", function() {
+			var ck = true;
 			
-			
-			var _init=function(){	
-				//登陆按钮切换
-					$(".login-ttl .mui-col-xs-6").on("tap", function() {
-						$(".login-ttl .mui-col-xs-6").removeClass("mui-active");
-						$(this).addClass("mui-active");
-					});
-	
-					//change 验证
-					$(".login-form input").on("keyup",function(){				
-						var ck=	true
-						$(".login-form input").each(function(){
-							if($(this).val()==""||!$(this).val()){
-								ck= false;
-							}
-						});
-						
-						if(ck){
-						
-							$(".login-btn .mui-btn").addClass("mui-active").removeAttr("disabled");
-							
-						}else{
-							$(".login-btn .mui-btn").removeClass("mui-active").attr("disabled","disabled")
-						
-						}
-					});
-				
-			
+			$(".login-list  input").each(function() {
+				if($(this).val() == "" || !$(this).val()) {
+					ck = false;
 				}
+			});
+
+			if(ck) {
 
 
-		return{
-			init:_init
-		}
-	})(window.Zepto)
-	
+				$(".login-submit .btn").addClass("active").removeAttr("disabled");
 
-/*
- * es6 模块加载
- */
-//
-//if(typeof exports === 'object' && typeof module !== 'undefined'){
-//	
-//	 module.exports=login;
-//}
+			} else {
+				$(".login-submit .btn").removeClass("active").attr("disabled", "disabled")
 
+			}
+		});
+
+	}
+
+	return {
+		init: _init
+	}
+})(window.Zepto)
 
 /*
  * requireJs amd 模块加载
  */
 
-if ( typeof define === "function" && define.amd ) {
-	define( "login", [], function() {
+if(typeof define === "function" && define.amd) {
+	define("login", [], function() {
 		return login;
 	});
 }
@@ -64,9 +45,7 @@ if ( typeof define === "function" && define.amd ) {
  * es6 模块加载
  */
 //
-if(typeof exports === 'object' && typeof module !== 'undefined'){
-	
-	 module.exports.login=login;
+if(typeof exports === 'object' && typeof module !== 'undefined') {
+
+	module.exports.login = login;
 }
-
-

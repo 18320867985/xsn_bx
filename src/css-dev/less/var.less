@@ -7,10 +7,10 @@
 @text-ash-3: #f0f3f5;
 @text-777: #7a7a7a;
 @text-999: #9a9a9a;
-@text-susess: #009984; //成功
+@text-success: #009984; //成功
 @text-warning: #f85043; //警告
 @text-danger: #e52c67; //危险
-@text-hover: @text-danger;
+@text-hover: @text-warning;
 @text-white: #fff;
 @text-primary: #09a2e9;
 @text-h：#666;
@@ -84,8 +84,11 @@ body {
     color: @text-999;
 }
 
-.text-susess {
-    color: @text-susess;
+.text-success {
+    color: @text-success;
+}
+.text-info{
+    color:#5bc0de;
 }
 
 .text-warning {
@@ -97,8 +100,8 @@ body {
 }
 
 //背景色
-.bg-susess {
-    background: @text-susess;
+.bg-success {
+    background: @text-success;
 }
 
 .bg-warning {
@@ -172,9 +175,10 @@ input::-moz-placeholder {
     transform: all .5;
     border: 1px solid darken(@bgcolor, 5%);
     &:active {
-        background: darken( @bgcolor, 20%);
+        background: darken( @bgcolor, 20%) !important;
         border: 1px solid darken(@bgcolor, 15%);
     }
+   
 }
 
 //创建无底色按钮

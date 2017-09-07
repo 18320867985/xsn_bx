@@ -1,111 +1,71 @@
 
-/*****登陆******/
+/*登陆页*/
 
-.login{
- 
-}
-
-//标题
-.login-ttl{
-    
+//列表项
+.login-list{
     margin-top: 10px;
-       background: #fff;
-   .mui-col-xs-6{
-      
-       border-bottom: 1px solid @text-ash-2;;
-          h5{
-               height: 40px;
-       line-height: 40px;
-            font-size: 18px;
-         };
-         &+.mui-col-xs-6{
-             border-left: 1px solid @text-ash-2;
-         }
-         
-         //选择 的样式
-         
-         &.mui-active h5{
-             color:@text-danger;
-         }
-         
-    }
-  
-
-}
-
-//login-form 表单
-
-.login-form {
-        padding: 5px 10px;
-        background: #fff;
-        label {
-            display: block;
-            height: 45px;
-            line-height: 45px;
-            width: 10%;
+   padding: 0 10px 0 20px;
+    background: #fff !important;
+    clear: both;
+    
+    li{
+        padding: 10px 0;
+        @h:34px;
+        label,input{
+            display: inline-block;
             float: left;
-           padding-left:8px;
+            height: @h;
+            font-size: 14px;
+        }
+        label{
+            width: 20%;
+            line-height: @h;
+        }
+        input{
+             width: 78%;
+             margin: 0;
+             border:none;
             
-            .iconfont.icon-mima1,
-             .iconfont.icon-ren-copy,
-             {
-               font-size: 24px !important;  
-               color:@text-ash;
-            }
         }
-        
-        .input-box{
-              width: 80%;
-                 float: left;
-        }
-        input {
-            height: 45px;
-            line-height: 45px;
-            
-            margin: 0 !important;
-            font-size: 16px;
-            border: none;
-        }
-        
-        .mui-row+.mui-row{
-            border-top:1px solid @text-ash-2;
+    
+        //相连的每一项
+        &+li{
+            padding-top: 10px;
+           border-top: 1px solid @text-ash-3;
+           
         }
     }
-    
-
-//btn
-
-.login-btn{
-   
-   margin-top: 40px; 
-   padding: 0 10px;
-   .mui-btn{
-         .create-btn(@text-ash,48px, 100%);
-         display: block;
-         font-size: 16px;
-         letter-spacing: 2px;
-       
-         
-   }
-   .mui-btn.mui-active{
-         .create-btn(@text-danger,48px, 100%);
-         display: block;
-         font-size: 16px;
-         letter-spacing: 2px;
-       
-         
-   }
-
 }
 
-//快速注册与找回密码
-.login-findpwd{
+//提交按钮
+.login-submit{
+    padding: 10px;
     
-    margin-top: 20px;
-    padding: 0 15px;
+    //默认的
+     .btn{
+        .create-btn(@text-ash,40px,100%);
+        
+        font-size: 16px;
+        
+        transition:  all .8s;
+    }
+    //激活的
+    .active.btn{
+        .create-btn(@text-warning,40px,100%);
+        
+        font-size: 16px;
+    }
+}
+
+//链接
+.login-link{
+    padding: 10px;
+    
+    //link
     a{
         color:@text-777;
-        transition:  all .8;
+        
+        //点击
         &:active{
             color:@text-warning;
         }
