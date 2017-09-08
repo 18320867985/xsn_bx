@@ -22,6 +22,8 @@ var  minJs=require('gulp-uglify');//压缩javascript文件  npm install gulp-ugl
 
 var less=require('gulp-less'); //less编译  npm install gulp-less
 
+var sass=require('gulp-sass'); //cnpm install gulp-sass --save-dev  使用：sass().on('error', sass.logError)
+
 var connect=require('gulp-connect'); //gulp-connect 创建服务器  npm install --save-dev gulp-connect
 
 var concat=require('gulp-concat'); //整合文件npm install --save-dev gulp-concat
@@ -76,6 +78,8 @@ var paths={
 	],
 		
 	lessPath:['./src/css-dev/less/**/*.less'],
+	
+	scssPath:['./src/css-dev/scss/**/*.scss'],
 	
 	allLess:['./src/css-dev/less/all.less'],
 	
@@ -170,13 +174,7 @@ gulp.task("t_ts", ["ts"],function () {
 //编译es6
 gulp.task("t_es6", function () {
 	 gulp.src(paths.es6)
-     .pipe(babel({
-            presets: ['es2015']
-            /*
-               	编译 的方式 env, es2015 , transform-runtime
-             */
-        })
-     ).pipe(gulp.dest("src/js-dev/es5"));
+     .pipe(babel()).pipe(gulp.dest("src/js-dev/es5"));
        
 
 });
@@ -197,11 +195,12 @@ gulp.task("t_es6", function () {
 	
  });
  
- //合并css文件
+ //less合并css文件
   gulp.task("t_mincss",function(){
  	
 	gulp.src(paths.allLess)
-	.pipe(less())
+	.pipe(less())   //less编译
+	//pipe(sass().on('error', sass.logError)) sass编译
 	//.pipe(minCss("all.css")) //压缩css文件
 	.pipe(gulp.dest('./src/css'));
 	
@@ -209,6 +208,18 @@ gulp.task("t_es6", function () {
 	
  });
 
+ //sass合并css文件
+  gulp.task("t_minscss",function(){
+ 	
+	gulp.src(paths.scssPath)
+	//.pipe(less())   //less编译
+	.pipe(sass().on('error', sass.logError)) // sass编译
+	//.pipe(minCss("all.css")) //压缩css文件
+	.pipe(gulp.dest('./src/scss'));
+	
+	gulp.src(paths.scssPath).pipe(connect.reload());
+	
+ });
 
 
 
@@ -232,8 +243,11 @@ gulp.task("watch",['connect'],function(){
 	//合拼压缩js文件
 	gulp.watch(paths.jsPath,["t_minjs"]);
 	
-	//合并压缩css文件
+	//less合并压缩css文件
 	gulp.watch(paths.lessPath,['t_mincss']);
+	
+	//sass合并压缩css文件
+	gulp.watch(paths.scssPath,['t_minscss']);
 	
 	//typescript文件
 	//gulp.watch(paths.typeScript,['t_ts']);

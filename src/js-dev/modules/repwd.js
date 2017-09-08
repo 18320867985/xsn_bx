@@ -3,6 +3,7 @@ var repwd = (function($) {
 
 	var _init = function() {
 
+
 		repwd.pwd1 = false;
 		repwd.pwd2 = false;
 
