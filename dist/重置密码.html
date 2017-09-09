@@ -63,45 +63,6 @@
 			//页面初始化
 			repwd.init();
 			
-			////发送验证码
-			(function($){
-				
-				var yzmClickBl=true;
-				$(".reg-list .re-yzm ").on("tap",function(){
-					
-					//这里写ajax代码 => 获取的bool值付给yzmClickBl变量
-
-					if(yzmClickBl){
-						yzmClickBl=false;
-							$(this).removeClass('active');
-							var yzmTime=60;
-							
-							var i=setInterval(function(){
-							if(yzmTime>0){
-								yzmTime=yzmTime-1;
-								var yzmTime2=yzmTime.toString().length>1?yzmTime:"0"+yzmTime;
-								if(yzmTime===0){
-									
-									$(".reg-list .re-yzm ").text("重新发送").addClass('active');
-									yzmClickBl=true;
-									clearInterval(i);
-								
-								}else{
-									$(".reg-list .re-yzm ").html("重新发送(<span class='text-warning'>"+yzmTime2+"s</span>)");
-								
-								}
-							}
-							},1000);
-							
-						};
-						
-					})
-				
-				
-			})(window.Zepto)
-			
-
-			
 		</script>
 	
 		

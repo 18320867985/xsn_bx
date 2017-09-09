@@ -1,11 +1,8 @@
 
 .icon-heart{
-    
+    $w:200px;
     &:hover{
         color:red;
-        
-        
-        
-        
+      width: $w;
     }
 }

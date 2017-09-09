@@ -1,8 +1,22 @@
+(function($){
+	var ff=(a,b)=>a+b;
+	
+	$("").on("tap",function(){})
+})(window.Zepto)
 
-let lists=[1,2,3,4]
-for(let s of lists){
-	alert(s)
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

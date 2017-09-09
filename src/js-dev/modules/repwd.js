@@ -130,3 +130,19 @@ if(typeof exports === 'object' && typeof module !== 'undefined') {
 
 	module.exports.repwd = repwd;
 }
+
+
+
+var f6=(a,b)=>a+b;
+
+var obj={
+	
+	ff2(){
+		return "345435";
+	}
+}
+
+
+
+
+
