@@ -21,7 +21,7 @@ var minJs = require('gulp-uglify'); //压缩javascript文件  npm install gulp-u
 
 var less = require('gulp-less'); //less编译  npm install gulp-less
 /* 
- *	cnpm install node-sass --save-dev
+ * cnpm install node-sass --save-dev
  * cnpm install gulp-sass --save-dev 
  * 使用：sass().on('error', sass.logError)
  */
@@ -43,10 +43,9 @@ var eslint = require("gulp-eslint"); // 检查es5 ees6 js gulp-eshint
  * es6 转换 es5
  * $ npm install --save-dev gulp-babel babel-preset-env
  * $ npm install --save-dev gulp-babel babel-preset-es2015
- * $ npm install --save-dev babel-plugin-transform-runtime
  * 
  * gulp插件之-----转化es6代码到es5 取消严格模式 remove "use strict" directive
- * npm install babel-plugin-transform-remove-strict-mode
+ * cnpm install babel-plugin-transform-remove-strict-mode
  */
 var babel = require("gulp-babel");
 
@@ -56,7 +55,7 @@ var ts = require("gulp-typescript"); //npm install --save-dev gulp-typescript �
 
 var tsProject = ts.createProject("tsconfig.json");
 
-//文件路径
+// 文件路径
 var paths = {
 
 	// 原有的js库
@@ -105,12 +104,12 @@ var paths = {
 
 }
 
-//测试
+// 测试
 gulp.task('test', function() {
 
 });
 
-//清空目录gulp-del
+// 清空目录gulp-del
 gulp.task('del', function(cd) {
 	// gulp.src('./dist',{read:false}).pipe(clean()); //gulp-clean
 
@@ -118,7 +117,7 @@ gulp.task('del', function(cd) {
 });
 
 
-//发布文件
+// 发布文件
 gulp.task('release', ['concat'], function() {
 
 	//**是所以文件夹
@@ -161,6 +160,8 @@ gulp.task("js",function(){
 
 
 
+
+
 // 合并js文件
 gulp.task("t_minjs", ["t_temp"], function() {
 
@@ -198,18 +199,7 @@ gulp.task("t_mincss", function() {
 
 });
 
-//sass合并css文件
-gulp.task("t_minscss", function() {
 
-	gulp.src(paths.scssPath)
-		//.pipe(less())   //less编译
-		.pipe(sass().on('error', sass.logError)) // sass编译
-		//.pipe(minCss("all.css")) // 压缩css文件
-		.pipe(gulp.dest('./src/scss'));
-
-	gulp.src(paths.scssPath).pipe(connect.reload());
-
-});
 
 //开启http服务器
 gulp.task('connect', function() {
@@ -257,6 +247,20 @@ gulp.task("watch", ['connect'], function() {
 
 
 /*===================其他的=========================*/
+
+
+//sass合并css文件
+gulp.task("t_minscss", function() {
+
+	gulp.src(paths.scssPath)
+		//.pipe(less())   //less编译
+		.pipe(sass().on('error', sass.logError)) // sass编译
+		//.pipe(minCss("all.css")) // 压缩css文件
+		.pipe(gulp.dest('./src/scss'));
+
+	gulp.src(paths.scssPath).pipe(connect.reload());
+
+});
 
 // 检查js
 gulp.task('t_eslint', function() {
