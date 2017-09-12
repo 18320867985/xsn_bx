@@ -212,8 +212,10 @@ gulp.task('connect', function() {
 
 /*
  * watch监听
+ * gulp.watch参数说明
+ * 1. gulp.watch(path,task);
+ * 2.gulp.watch(path,function(){});
  */
-
 gulp.task("watch", ['connect'], function() {
 
 	//合拼压缩js文件
@@ -240,10 +242,9 @@ gulp.task("watch", ['connect'], function() {
 
 });
 
-/* gulp.watch参数说明
- * 1. gulp.watch(path,task);
- * 2.gulp.watch(path,function(){});
- */
+
+
+
 
 
 /*===================其他的=========================*/
