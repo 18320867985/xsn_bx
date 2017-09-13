@@ -1,0 +1,44 @@
+/*报修详情*/
+
+.bxdtl {
+    
+    // 列表1
+    .list-1 {
+        margin-top: 10px !important;
+        padding: 15px;
+        background: #fff;
+        
+        li {
+            padding-left: 10px;
+            
+            label{ margin-right: 5px;}
+            &+li {
+                margin-top: 10px;
+            }
+        }
+       
+        //项链每一项
+        &+ul {
+            margin-top: -5px !important;
+        }
+    }
+    
+    
+    // 列表2
+    .list-2{
+       
+        padding: 20px 10px;
+        background: #fff;
+        
+        li{
+            .mui-text-left{
+                padding-left: 10px !important;
+            }
+        }
+        // 相连每一项
+        li+li{
+            margin-top: 20px;
+        }
+        
+    }
+}

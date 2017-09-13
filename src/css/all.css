@@ -4311,7 +4311,6 @@ select.mui-form-control {
   color: #f85043 !important;
 }
 /*var*/
-@text-h ：#666;
 /*默认样式*/
 body {
   font-family: "微软雅黑,宋体, 楷体  ";
@@ -4359,6 +4358,9 @@ body {
 }
 .text-danger {
   color: #e52c67;
+}
+.text-primary {
+  color: #09a2e9;
 }
 .bg-success {
   background: #009984;
@@ -5075,4 +5077,95 @@ input::-moz-placeholder {
   top: 0px;
   color: #e52c67;
   font-size: 24px;
+}
+/*报修详情*/
+.bxdtl .list-1 {
+  margin-top: 10px !important;
+  padding: 15px;
+  background: #fff;
+}
+.bxdtl .list-1 li {
+  padding-left: 10px;
+}
+.bxdtl .list-1 li label {
+  margin-right: 5px;
+}
+.bxdtl .list-1 li + li {
+  margin-top: 10px;
+}
+.bxdtl .list-1 + ul {
+  margin-top: -5px !important;
+}
+.bxdtl .list-2 {
+  padding: 20px 10px;
+  background: #fff;
+}
+.bxdtl .list-2 li .mui-text-left {
+  padding-left: 10px !important;
+}
+.bxdtl .list-2 li + li {
+  margin-top: 20px;
+}
+/*评价编辑*/
+.bxedit .complete {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #3e444c;
+}
+.bxedit .select {
+  position: relative;
+}
+.bxedit .select label {
+  height: 34px;
+  line-height: 34px;
+}
+.bxedit .select select.mui-form-control {
+  border-radius: 0;
+  color: #f85043;
+}
+.bxedit .select .mui-icon-arrowdown {
+  position: absolute;
+  right: 5px;
+  top: 6px;
+  color: #aab2bd;
+}
+.bxedit .select .xing-box .iconfont {
+  font-size: 24px;
+  line-height: 34px;
+}
+.bxedit .list-2 h5 {
+  padding-left: 10px;
+  font-weight: 400;
+}
+.bxedit .list-2 ul {
+  padding: 0;
+  text-align: center;
+}
+.bxedit .list-2 ul li {
+  display: inline-block;
+  float: none;
+  width: 30%;
+  padding: 5px 5px;
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.bxedit .list-2 ul li a {
+  display: inline-block;
+  float: none;
+  width: 100%;
+  padding: 5px 10px;
+  color: #3e444c;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid #f0f3f5;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.bxedit .list-2 ul li a.active {
+  background: #f85043 !important;
+  box-shadow: 1px 1px 3px #f0f3f5;
+  color: #fff;
 }

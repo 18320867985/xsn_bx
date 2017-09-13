@@ -188,6 +188,51 @@ $(".mui-bar.mui-bar-tab .mui-tab-item").on("tap", function () {
 //	});
 //	
 ///*****置顶组件end*********/
+/*复选框
+ * <ul>
+ * 	<li class="checkbox-btn-box"> 
+ * 		<a class="item">技术牛逼</a>
+ * 	</li>
+ * 	<li class="checkbox-btn-box"> 
+ * 		<a class="item">信息大师</a>
+ * 	</li>
+ * </ul>
+ * 
+ * 		// 选中点击事件
+		$(".checkbox-btn-box").on("checkbox-btn_select",function(event,element){			
+			
+			// element 当前点击的元素
+			alert($(element));
+		}
+		
+		// 取消点击事件
+		$(".checkbox-btn-box").on("checkbox-btn_unselect",function(event,element){			
+			
+			// element 当前点击的元素
+			alert($(element));
+		}
+ * 
+ * */
+
+;(function () {
+
+	//技术标签
+	$(".checkbox-btn-box .item").on("tap", function () {
+
+		if (typeof $(this).attr("data-bl") == "undefined") {
+			$(this).addClass("active");
+			$(this).attr("data-bl", "true");
+
+			//点击触发自定义事件
+			$(this).trigger("checkbox-btn_select", [this]);
+		} else {
+			//点击触发自定义事件
+			$(this).trigger("checkbox-btn_unselect", [this]);
+			$(this).removeClass("active");
+			$(this).removeAttr("data-bl");
+		}
+	});
+})(window.jQuery || window.Zepto);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*
@@ -589,6 +634,42 @@ var baoxiu = function ($) {
 		init: _init
 	};
 }(window.Zepto);
+var bxedit = function ($) {
+
+	var _init = function _init() {
+
+		// 星级
+		$(".bxedit .xing-box .iconfont").on("tap", function () {
+
+			var _index = $(this).index();
+
+			$(".bxedit .xing-box .iconfont").each(function () {
+
+				var _index2 = $(this).index();
+
+				if (_index2 <= _index) {
+
+					$(this).removeClass("icon-xing ").addClass("icon-xing-2 text-warning");
+				} else {
+					$(this).removeClass("icon-xing-2 text-warning").addClass("icon-xing");
+				}
+			});
+
+			//点击触发自定义事件
+			$(this).trigger("bxedit_select_star", [this]);
+		});
+
+		//取消所有星
+		$(".bxedit .xing-box-btn").on("tap", function () {
+
+			$(".bxedit .xing-box .iconfont").removeClass("icon-xing-2 text-warning").addClass("icon-xing");
+		});
+	};
+
+	return {
+		init: _init
+	};
+}(window.Zepto);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var login = function ($) {
@@ -767,7 +848,7 @@ var f6 = function f6(a, b) {
 };
 
 var obj = {
-	ff2: function ff2() {
+	ff21: function ff21() {
 		return "345435";
 	}
 };

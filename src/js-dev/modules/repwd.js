@@ -137,7 +137,7 @@ var f6=(a,b)=>a+b;
 
 var obj={
 	
-	ff2(){
+	ff21(){
 		return "345435";
 	}
 }
