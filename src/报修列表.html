@@ -58,7 +58,7 @@
 					</li>
 
 					<!--点评-->
-					<li class="dianping">
+					<li class="dianping active">
 						<input class="btn" type="button" name="" id="" value="点评" />
 					</li>
 				</ul>
@@ -190,7 +190,7 @@
 					</li>
 
 					<!--点评-->
-					<li class="dianping">
+					<li class="dianping active">
 						<input class="btn" type="button" name="" id="" value="点评" />
 					</li>
 				</ul>
@@ -202,35 +202,39 @@
 		<!--评价框-->
 		<aside class="bxlist-aside">
 			<div class="cont">
+				<span class="close">&times;</span>
 				
 				<h5 class="ttl">请对此报修进行评价</h5>
 				<div class="radio-list mui-clearfix">
 					<div class="radio-box">
-						<label class="" for="ck">
-					   		<input type="radio" name="radio" id="ck" value="1" />
+						<label class="">
+					   		<input type="radio" name="radio" value="1" />
 					   		好评
 				  		 </label>
 					</div>
 					<div class="radio-box">
-						<label class="" for="ck">
-					   		<input type="radio" name="radio" id="ck" value="2" />
+						<label class="" >
+					   		<input type="radio" name="radio"  value="2" />
 					   		中评
 				  		 </label>
 					</div>
 					<div class="radio-box">
-						<label class="" for="ck">
-					   		<input type="radio" name="radio" id="ck" value="3" />
+						<label class="" >
+					   		<input type="radio" name="radio" value="3" />
 					   		差评
 				  		 </label>
 					</div>
-				
+					
+					<!--取消点评-->
+					 <input class="cancel-ck v-hide" type="radio"  name="radio"  value="-1" />
+					   
 				</div>
-				
+
 				<div class="btns">
 					<input class="btn" type="button" name="" id="" value="确定" />
-					
+
 				</div>
-	
+
 			</div>
 		</aside>
 
@@ -238,28 +242,59 @@
 		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
 
 		<script>
+			
 			mui.ready(function() {
-				
+			
 				//点评
-				$(".dianping.active .btn").on("tap",function(){
-					
+				var selelct_obj=null;
+				$(".dianping.active .btn").on("tap", function() {
+			
 					$(".bxlist-aside").show();
 					
-				});
-				
-				//确定点评
-				$(".bxlist-aside .btns .btn").on("tap",function(){
-					
-//					var p=$(this).parents(".radio-list");
-//					alert(	$("input[type=radio]:checked",p).html())
-//						
-//					$(this).parents(".bxlist-aside").hide();
-					
-				})
-				
+					// 检测是否是已选择过的对象
+					if(selelct_obj!==this){
 
-			})
+						//设置radio的checked全为空
+						$(".bxlist-aside .cancel-ck").attr("checked","checked").click();
+						selelct_obj=this;
+					}
+					
+				});
+			
+				// 确定点评
+				$(".bxlist-aside .btn").on("tap", function() {
+			
+					var sl = $(".bxlist-aside .radio-box input[type=radio]:checked");
+			
+					if(sl.length > 0) {
+						var p = $(sl).parent("label");
+						var v=sl.val();// 点评值
+						var txt=p.text().trim(); // 点评内容
+						
+						// 这里写服务端执行代码...ajax...
+						
+						
+						// 改变评价文本
+						$(selelct_obj).val(txt).parents(".dianping").removeClass("active");
+						$(selelct_obj).attr("disabled","disabled");
+					}
+			
+					$(this).parents(".bxlist-aside").hide(); //隐藏评价框
+			
+				});
+			
+			});
+			
+			// 关闭
+			$(".bxlist-aside .close").on("tap",function(){
+				
+				$(this).parents(".bxlist-aside").hide();
+			});
+			
+			
 		</script>
+	
+	
 	</body>
 
 </html>
