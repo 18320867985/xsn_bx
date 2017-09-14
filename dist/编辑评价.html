@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>编辑评价</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" href="css/all.css" />
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav bxedit ">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
+			<h1 class="mui-title">编辑评价</h1>
+			<!--完成-->
+			<a class="complete" href="javascript:;">完成</a>
+		</header>
+
+		<!--主体部分-->
+		<section class="mui-content ">
+
+			<section class="bxdtl bxedit">
+				<!--列表1-->
+				<ul class="list-1">
+
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-3 mui-ellipsis">
+							<label for="">报修时间:</label>
+
+						</div>
+						<div class="mui-col-xs-9">
+							<span>2017-08-12</span>
+						</div>
+
+					</li>
+
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-3 mui-ellipsis">
+							<label for="">问题类型:</label>
+
+						</div>
+						<div class="mui-col-xs-9">
+							<span>数据问题</span>
+						</div>
+
+					</li>
+
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-3 mui-ellipsis">
+							<label for="">保修内容:</label>
+
+						</div>
+						<div class="mui-col-xs-9">
+							<span>无法生成凭证</span>
+						</div>
+
+					</li>
+
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-3 mui-ellipsis">
+							<label for="">处理时间:</label>
+
+						</div>
+						<div class="mui-col-xs-9">
+							<span>2017-08-12 12:34:22</span>
+						</div>
+
+					</li>
+
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-3 mui-ellipsis">
+							<label for="">处理时长:</label>
+
+						</div>
+						<div class="mui-col-xs-9">
+							<span>3小时</span>
+						</div>
+
+					</li>
+
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-3 mui-ellipsis">
+							<label for="">处理人员:</label>
+
+						</div>
+						<div class="mui-col-xs-9">
+							<span class="text-warning">李明</span>
+						</div>
+
+					</li>
+
+					<li class="mui-row mui-clearfix select">
+						<div class="mui-col-xs-3 ">
+							<label for="" class="mui-text-muted-bs">评价对象</label>
+						</div>
+						<div class="mui-col-xs-9   relative">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="">
+								<option value="1">全体成员</option>
+
+							</select>
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+					</li>
+
+					<li class="mui-row mui-clearfix select">
+						<div class="mui-col-xs-3 ">
+							<label for="" class="mui-text-muted-bs">评分:</label>
+						</div>
+						<div class="mui-col-xs-9   relative">
+							<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus   rd-no2" placeholder="9.8" />
+
+						</div>
+
+					</li>
+
+					<li class="mui-row mui-clearfix select">
+						<div class="mui-col-xs-3 ">
+							<label for="" class="mui-text-muted-bs xing-box-btn">星级:</label>
+						</div>
+						<div class="mui-col-xs-9 xing-box">
+							<span class="iconfont icon-xing "></span>
+							<span class="iconfont icon-xing"></span>
+							<span class="iconfont icon-xing"></span>
+							<span class="iconfont icon-xing"></span>
+							<span class="iconfont icon-xing"></span>
+						</div>
+
+					</li>
+
+				</ul>
+				
+				<!--其他技能-->
+				<div class="list-2">
+					<h5>其他技能标签</h5>
+					<ul class="mui-clearfix mui-row select-tag checkbox-btn-box">
+						<li >
+							<a class="item" href="javascript:;">技术牛逼</a> 
+						</li>
+						<li>
+							<a class="item" href="javascript:;">准时报修</a>
+						</li>
+						<li>
+							<a  class="item" href="javascript:;">责任心强</a>
+						</li>
+						<li>
+							<a  class="item" href="javascript:;">信息大师</a>
+						</li>
+						<li>
+							<a class="item" href="javascript:;">声音好听</a>
+						</li>
+						<li>
+							<a class="item" href="javascript:;">长的帅</a>
+						</li>
+					</ul>
+					
+				</div>
+				
+			</section>
+
+		</section>
+
+		
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+			// 页面初始化
+			bxedit.init();
+
+			// 选择星级
+			$(".xing-box").on("bxedit_select_star", function(event) {
+				//element 当前点击的元素	
+				var cnt = $(event.target).index() + 1;
+				//alert(cnt + "个星");
+
+			});
+			
+			
+		// 选中点击事件
+		$(".checkbox-btn-box").on("checkbox-btn_select",function(event,element){			
+			
+			// element 当前点击的元素
+			//alert($(element).text());
+		});
+		
+		// 取消点击事件
+		$(".checkbox-btn-box").on("checkbox-btn_unselect",function(event,element){			
+			
+			// element 当前点击的元素
+			//alert($(element).text());
+		});
+		</script>
+
+	</body>
+
+</html>

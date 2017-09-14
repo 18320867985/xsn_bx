@@ -61,13 +61,13 @@ var paths = {
 	// 原有的js库
 	jsCommon: [
 
-		"src/js-dev/prefix-css3.min.js", // css3前缀
+		"src/js-dev/libs/prefix-css3.min.js", // css3前缀
 
-		//"src/js-dev/vue/vue.min.js",  // vue.min.js
+		//"src/js-dev/libs/vue/vue.min.js",  // vue.min.js
 
-		"src/js-dev/mui/mui.js", // mui插件
+		"src/js-dev/libs/mui/mui.js", // mui插件
 
-		"src/js-dev/zepto/zepto.js", //z epto.js
+		"src/js-dev/libs/zepto/zepto.js", //z epto.js
 
 		"src/js-dev/temp/*.js", // 合并自定义的js
 
@@ -98,9 +98,9 @@ var paths = {
 
 	htmlPath: ['./src/**/*.html'],
 
-	es6: ['./src/js-dev/es6/*.js'],
+	es6: ['./src/js-dev/libs/es6/*.js'],
 
-	typeScript: ['./src/js-dev/ts/*.ts'],
+	typeScript: ['./src/js-dev/libs/ts/*.ts'],
 
 }
 
