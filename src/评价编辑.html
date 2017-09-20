@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 		<meta name="Keywords" content="" />
 		<meta name="Description" content="" />
 		<title>编辑评价</title>
@@ -197,6 +197,17 @@
 			// element 当前点击的元素
 			//alert($(element).text());
 		});
+		
+		// 完成
+		$(".complete").on("tap",function(){
+			
+			compt.confirm("确认保存修改？",function(){
+				// 确认todo...
+				mui.alert("todo");
+				
+			},["确认","取消"]);
+		});
+		
 		</script>
 
 	</body>

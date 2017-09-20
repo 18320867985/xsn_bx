@@ -1,0 +1,42 @@
+/*评价列表*/
+
+.pjlist {
+    margin-top: 10px;
+    background: #fff;
+}
+
+.pjlist-item {
+    padding: 0 10px;
+    //小图标
+    .ttl {
+        text-align: center;
+        img {
+            
+            position: relative;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    ul {
+        padding: 0;
+        padding-bottom: 10px;
+        .star{
+            .iconfont{
+                font-size: 14px;
+            }
+            
+            a{
+              line-height: 17px;  
+            }
+        }
+        li+li {
+            margin-top: 2px;
+        }
+    }
+}
+
+//相连的每一 项
+.pjlist-item+.pjlist-item {
+    border-top: 1px solid @text-ash-3;
+}

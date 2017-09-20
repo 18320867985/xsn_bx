@@ -1,0 +1,31 @@
+
+/*投诉列表*/
+
+.taosulist {
+    
+    margin-top: 10px;
+    // 列表1
+    ul.list-1 {
+         margin: 0 ;
+         
+        padding: 15px;
+        background: #fff;
+       
+        li {
+            padding-left: 10px;
+            
+            label{ margin-right: 1px;}
+            &+li {
+                margin-top: 10px;
+            }
+        }
+       
+        //项链每一项
+        &+ul {
+            border-top: 1px solid @text-ash-3;
+        }
+    }
+    
+    
+   
+}
