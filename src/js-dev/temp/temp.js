@@ -569,7 +569,6 @@ var baoxiu = function ($) {
 		// 日期组件
 		var btns = mui('#select-date');
 		btns.each(function (i, btn) {
-
 			btn.addEventListener('tap', function () {
 				var optionsJson = this.getAttribute('data-options') || '{}';
 				var options = JSON.parse(optionsJson);
@@ -593,7 +592,6 @@ var baoxiu = function ($) {
 
 		// h5 上传图片
 		$(".btn-up").on("click", function () {
-
 			$("#fileUp").click();
 		});
 
@@ -602,7 +600,6 @@ var baoxiu = function ($) {
 		});
 
 		var fileupff = function fileupff(obj) {
-
 			$(obj).parents(".progress-box").find(".progress-all").show();
 			var file = document.getElementById("fileUp").files[0];
 			h5File.upload({
@@ -612,7 +609,6 @@ var baoxiu = function ($) {
 				el: $(obj), //当前element
 				size: 300000000, //1M=1000000
 				seccess: function seccess(data) {
-
 					if (typeof data.url !== 'undefined') {
 						document.querySelector(".upload-img").src = data.url;
 						document.querySelector(".progress-box .file-up").value = data.url;
@@ -620,7 +616,6 @@ var baoxiu = function ($) {
 				}, //成功回调
 				error: function error(data) {
 					alert("数据加载失败...");
-
 					// 以下代码 测试使用  发布注释掉
 					document.querySelector(".upload-img").src = "images/劲爆图片.png";
 					document.querySelector(".progress-box .file-up").value = "images/劲爆图片.png";

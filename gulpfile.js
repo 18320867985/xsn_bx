@@ -75,13 +75,15 @@ var paths = {
 
 		"src/js-dev/libs/mui/mui.js", // mui插件
 		
-		"src/js-dev/libs/mui/mui.pullToRefresh.js", // 循环初始化所有下拉刷新，上拉加载1。
+		"src/js-dev/libs/mui/pullToRefresh.js", // 循环初始化所有下拉刷新，上拉加载1。
 			
-		"src/js-dev/libs/mui/mui.pullToRefresh.material.js", // 循环初始化所有下拉刷新，上拉加载2。
+		"src/js-dev/libs/mui/pullToRefresh.material.js", // 循环初始化所有下拉刷新，上拉加载2。
 
-		"src/js-dev/libs/zepto/zepto.js", //z epto.js
+		"src/js-dev/libs/zepto/zepto.js", // zepto.js
 
 		"src/js-dev/temp/*.js", // 合并自定义的js
+		
+		"src/js-dev/libs/vd/vd.js", // 自定义验证
 
 	],
 

@@ -269,6 +269,15 @@ a:active {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.mui-ellipsis-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
 .mui-table {
   display: table;
   width: 100%;
@@ -5355,17 +5364,24 @@ input::-moz-placeholder {
   width: 40px;
   height: 40px;
 }
-.pjlist-item ul {
-  padding: 0;
-  padding-bottom: 10px;
+.pjlist-item .ttl .iconfont {
+  position: relative;
+  top: 34px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px ;
 }
-.pjlist-item ul .star .iconfont {
+.pjlist-item ul.cont {
+  padding: 0;
+  padding-bottom: 5px;
+}
+.pjlist-item ul.cont .star .iconfont {
   font-size: 14px;
 }
-.pjlist-item ul .star a {
-  line-height: 17px;
+.pjlist-item ul.cont li a {
+  line-height: 24px;
 }
-.pjlist-item ul li + li {
+.pjlist-item ul.cont li + li {
   margin-top: 2px;
 }
 .pjlist-item + .pjlist-item {
@@ -5391,4 +5407,113 @@ input::-moz-placeholder {
 }
 .taosulist ul.list-1 + ul {
   border-top: 1px solid #f0f3f5;
+}
+/*我的产品*/
+.myprod {
+  margin-top: 10px;
+}
+.myprod ul.list-1 {
+  margin: 0 ;
+  padding: 15px;
+  background: #fff;
+}
+.myprod ul.list-1 li {
+  padding-left: 10px;
+}
+.myprod ul.list-1 li label {
+  margin-right: 1px;
+}
+.myprod ul.list-1 li + li {
+  margin-top: 10px;
+}
+.myprod ul.list-1 + ul {
+  border-top: 1px solid #f0f3f5;
+}
+/*修改密码*/
+.pwdedit {
+  margin-top: 10px;
+}
+.pwdedit .pwdedit-form {
+  padding: 5px 10px;
+  background: #fff;
+}
+.pwdedit .pwdedit-form label {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  width: 25%;
+  float: left;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.pwdedit .pwdedit-form .input-box {
+  position: relative;
+  width: 70%;
+  float: left;
+}
+.pwdedit .pwdedit-form .input-box a.pwdedit-yzm {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  width: 100px;
+  text-align: center;
+  font-size: 14px;
+  border-left: 1px solid #e6e9ed;
+  color: #aab2bd;
+}
+.pwdedit .pwdedit-form .input-box a.pwdedit-yzm.mui-active {
+  color: #009984;
+}
+.pwdedit .pwdedit-form input {
+  height: 45px;
+  padding: 6px 10px;
+  margin: 0 !important;
+  font-size: 16px;
+  border: none;
+}
+.pwdedit .pwdedit-form .mui-row + .mui-row {
+  border-top: 1px solid #e6e9ed;
+}
+.pwdedit .pwdedit-btn {
+  margin-top: 40px;
+  padding: 0 10px;
+}
+.pwdedit .pwdedit-btn input {
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  background: #aab2bd;
+  font-size: 16px;
+  -webkit-transform: all .5;
+          transform: all .5;
+  border: 1px solid #9ca5b2;
+}
+.pwdedit .pwdedit-btn input:active {
+  background: #717e90 !important;
+  border: 1px solid #7f8b9c;
+}
+.pwdedit .pwdedit-btn.mui-active input {
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  background: #e52c67;
+  font-size: 16px;
+  -webkit-transform: all .5;
+          transform: all .5;
+  border: 1px solid #dc1b59;
+}
+.pwdedit .pwdedit-btn.mui-active input:active {
+  background: #98133d !important;
+  border: 1px solid #af1646;
 }
