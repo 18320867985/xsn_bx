@@ -5499,7 +5499,7 @@ input::-moz-placeholder {
   background: #717e90 !important;
   border: 1px solid #7f8b9c;
 }
-.pwdedit .pwdedit-btn.mui-active input {
+.pwdedit .pwdedit-btn.active input {
   display: inline-block;
   height: 48px;
   line-height: 48px;
@@ -5507,13 +5507,103 @@ input::-moz-placeholder {
   padding: 0;
   text-align: center;
   color: #fff;
-  background: #e52c67;
+  background: #f85043;
   font-size: 16px;
   -webkit-transform: all .5;
           transform: all .5;
-  border: 1px solid #dc1b59;
+  border: 1px solid #f7392a;
 }
-.pwdedit .pwdedit-btn.mui-active input:active {
-  background: #98133d !important;
-  border: 1px solid #af1646;
+.pwdedit .pwdedit-btn.active input:active {
+  background: #cd1608 !important;
+  border: 1px solid #e61809;
+}
+/*消息详情*/
+.infodtl ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  background: #fff;
+}
+.infodtl ul li {
+  padding: 10px;
+}
+.infodtl ul li label {
+  color: #444;
+}
+.infodtl ul li span {
+  color: #777;
+}
+.infodtl ul li + li {
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f3f5;
+}
+/***基本信息****/
+.baseinfo .mui-navigate-right span.mui-pull-right {
+  margin-right: 25px;
+}
+.baseinfo .head-img .ttl {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+.baseinfo .head-img img {
+  margin-right: 25px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.baseinfo-alert {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.baseinfo-alert header {
+  padding: 5px 10px;
+  background: #333;
+}
+.baseinfo-alert header .mui-pull-left {
+  color: #fff;
+}
+.baseinfo-alert header .mui-pull-left .mui-icon {
+  position: relative;
+  top: 3px;
+  font-size: 30px;
+}
+.baseinfo-alert header .mui-pull-left .back-ttl {
+  display: inline-block;
+  height: 34px;
+  line-height: 34px;
+  margin-left: 10px;
+}
+.baseinfo-alert header .mui-pull-right {
+  height: 34px;
+  line-height: 34px;
+}
+.baseinfo-alert header .mui-pull-right .btn {
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  padding: 4px 18px !important;
+  background: green;
+  color: #fff;
+  border: none;
+}
+.baseinfo-alert header .mui-pull-right .btn:active {
+  background: #006700;
+  color: #fff;
+}
+.baseinfo-alert section {
+  padding: 20px;
+}
+.baseinfo-alert section input.txt-v {
+  background: none !important;
+  border: none;
+  border-bottom: 1px solid green;
+  border-radius: 0;
 }

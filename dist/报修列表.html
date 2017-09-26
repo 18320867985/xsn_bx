@@ -238,6 +238,49 @@
 			</div>
 		</aside>
 
+		<!--模板-->
+		<script type="text/html" id="must">
+			{{#must}}
+			
+				<ul>
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-6 mui-ellipsis">
+							<label for="">报修时间</label>
+							<span>{{date}}</span>
+						</div>
+						<div class="mui-col-xs-6">
+							<label for="">问题类型</label>
+							<span>{{type}}</span>
+						</div>
+					</li>
+
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-12 mui-ellipsis">
+							<label for="">保修内容</label>
+							<span>{{content}}</span>
+						</div>
+
+					</li>
+
+					<li class="mui-row mui-clearfix">
+						<div class="mui-col-xs-6 mui-ellipsis">
+							<label for="">处理状态</label>
+							<span class="text-success">{{status}}</span>
+						</div>
+
+					</li>
+					<!--点评-->
+					<li class="dianping active">
+						<input class="btn" type="button" name="" id="" value="点评" />
+					</li>
+
+				</ul>
+
+				
+			{{/must}}
+		</script>
+
+			
 		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
 
@@ -247,8 +290,8 @@
 			
 				//点评
 				var selelct_obj=null;
-				$(".dianping.active .btn").on("tap", function() {
-			
+				$(".bxlist").on("click",".btn", function() {
+					
 					$(".bxlist-aside").show();
 					
 					// 检测是否是已选择过的对象
@@ -262,7 +305,7 @@
 				});
 			
 				// 确定点评
-				$(".bxlist-aside .btn").on("tap", function() {
+				$(".bxlist-aside ").on("tap",".btn", function() {
 			
 					var sl = $(".bxlist-aside .radio-box input[type=radio]:checked");
 			
@@ -293,7 +336,71 @@
 			
 			
 		</script>
-	
+		
+		
+		<script>
+		
+			(function(mui, $) {
+
+				mui.ready(function() {
+
+					var count = 1; //页码
+					var maxpage = 5; //最大页码
+
+					// 没有更多数据
+					if(maxpage <= count) {
+						var div = document.createElement("div");
+						div.innerText = "没有更多数据了";
+						div.style.textAlign = "center";
+						div.style.padding = "10px 0";
+						div.style.background = "#efeff4";
+						div.style.color = "#777";
+						document.querySelector('.mui-content').appendChild(div);
+						return;
+					}
+
+					//循环初始化所有下拉刷新，上拉加载。
+					mui.each(document.querySelectorAll('.mui-content'), function(index, pullRefreshEl) {
+
+						mui(pullRefreshEl).pullToRefresh({
+
+							up: {
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+										var ul = self.element.querySelector('.bxlist');
+
+										//ajax数据 ......		
+										$.get("json/bxlist.json" + "?id=" + count, function(data2) {
+											var html = Mustache.to_html($("#must").html(), {
+												must: data2
+											});
+
+											$(ul).append(html);
+
+										});
+
+										count++; //页码
+										self.endPullUpToRefresh((count >= maxpage));
+
+									}, 1000);
+								},
+								contentinit: '上拉显示更多',
+								contentdown: '上拉显示更多',
+								contentrefresh: '正在加载...',
+								contentnomore: '没有更多数据了',
+
+							}
+
+						});
+
+					});
+
+				});
+
+			})(mui, window.Zepto);
+		</script>
+
 	
 	</body>
 
