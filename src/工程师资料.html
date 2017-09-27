@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>工程师资料</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" href="css/all.css" />
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav bxedit ">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
+			<h1 class="mui-title">工程师资料</h1>
+
+		</header>
+
+		<!--主体部分-->
+		<section class="mui-content ">
+
+			<section class="gcs">
+
+				<!--个人信息-->
+				<section class="gcs-xx mui-row">
+					<div class="mui-col-xs-3 mui-text-right">
+						<img class="img" src="images/客服.png" alt="个人头像" />
+					</div>
+					<ul class="mui-col-xs-9">
+						<li class="mui-clearfix">
+							<span>黄嘉信</span>
+						</li>
+						<li class="mui-clearfix">
+							<label for="">性别:</label>
+							<span>男</span>
+							<label for="">年龄:</label>
+							<span>27</span>
+						</li>
+						<li class="mui-clearfix">
+							<label for="">爱好:</label>
+							<span>足球，篮球，游泳，跑山</span>
+						</li>
+
+					</ul>
+
+				</section>
+
+				<!--证书-->
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							证书资源
+						</a>
+					</li>
+
+				</ul>
+
+				<!--证书图片-->
+				<div class="gcs-slider mui-slider">
+					<div class="mui-slider-group ">
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/zs1.jpg">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/zs2.jpg">
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/zs3.jpg">
+							</a>
+						</div>
+
+						<!-- 第四张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/zs4.png">
+							</a>
+						</div>
+
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+
+				<!--评分-->
+				<ul class="list-1">
+
+					<li class="mui-row mui-clearfix select">
+						<div class="mui-col-xs-4  mui-text-center ">
+							<label for="" class="mui-text-muted-bs ">评分:</label>
+							<span>9.8</span>
+						</div>
+						<div class="mui-col-xs-8 ">
+								
+							
+							<div class="xing-box mui-text-center">
+								<label class="xing-box-btn" for="">星级:</label>
+							<span class="iconfont icon-xing "></span>
+							<span class="iconfont icon-xing"></span>
+							<span class="iconfont icon-xing"></span>
+							<span class="iconfont icon-xing"></span>
+							<span class="iconfont icon-xing"></span>
+							</div>
+							
+						</div>
+
+					</li>
+
+				</ul>
+
+				<!--其他技能-->
+				<div class="list-2">
+					<h5>其他技能标签</h5>
+					<ul class="mui-clearfix mui-row select-tag checkbox-btn-box">
+						<li>
+							<a class="item" href="javascript:;">技术牛逼</a>
+						</li>
+						<li>
+							<a class="item" href="javascript:;">准时报修</a>
+						</li>
+						<li>
+							<a class="item" href="javascript:;">责任心强</a>
+						</li>
+						<li>
+							<a class="item" href="javascript:;">信息大师</a>
+						</li>
+						<li>
+							<a class="item" href="javascript:;">声音好听</a>
+						</li>
+						<li>
+							<a class="item" href="javascript:;">长的帅</a>
+						</li>
+					</ul>
+
+				</div>
+
+			</section>
+
+		</section>
+
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+			// 页面初始化
+			gcs.init();
+
+			// 选择星级
+			$(".xing-box").on("gcs_select_star", function(event) {
+				//element 当前点击的元素	
+				var cnt = $(event.target).index();
+				//alert(cnt + "个星");
+
+			});
+
+
+
+			// 选中点击事件
+			$(".checkbox-btn-box").on("checkbox-btn_select", function(event, element) {
+
+				// element 当前点击的元素
+				//alert($(element).text());
+			});
+
+			// 取消点击事件
+			$(".checkbox-btn-box").on("checkbox-btn_unselect", function(event, element) {
+
+				// element 当前点击的元素
+				//alert($(element).text());
+			});
+
+			
+		</script>
+
+	</body>
+
+</html>

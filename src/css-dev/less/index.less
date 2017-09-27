@@ -1,0 +1,69 @@
+/*首页*/
+
+.index-banner {
+    width: 100%;
+    height: 280px;
+    color: #fff;
+    text-align: center;
+    background: url(../images/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    h5 {
+        color: #fff;
+    }
+    // 头像
+    .h-img {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        float: none;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+    }
+    // ttl
+    .ttl {
+        margin-top: 10px;
+        font-weight: 600;
+    }
+    //tabs
+    .tabs {
+        margin-top: 30px;
+        text-align: center;
+        a {
+            color: #fff;
+        }
+        h5 {
+            margin-top: 5px;
+        }
+        ;
+    }
+}
+
+.index-list {
+    ul {
+        li {
+            position: relative;
+          
+            .iconfont {
+                position: relative;
+                margin-right: 10px;
+                top:4px;
+                font-size: 24px;
+                &.icon-shenhe {
+                    color: green;
+                }
+                
+                &.icon-denglu{
+                    color:rgb(57,197,224);
+                }
+                
+                 &.icon-wodedingdan{
+                    color:rgb(117,139,248);
+                }
+            }
+        }
+        +ul {
+            margin-top: 10px;
+        }
+    }
+}
