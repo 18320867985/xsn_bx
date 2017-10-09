@@ -10,6 +10,7 @@
 		<title>工程师资料</title>
 		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
 		<link rel="stylesheet" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui-preview-image.css"/>
 
 	</head>
 
@@ -66,26 +67,26 @@
 						<!-- 第一张 -->
 						<div class="mui-slider-item">
 							<a href="#">
-								<img src="images/zs1.jpg">
+								<img src="images/zs1.jpg" data-preview-group="1"  data-preview-src="">
 							</a>
 						</div>
 						<!-- 第二张 -->
 						<div class="mui-slider-item">
 							<a href="#">
-								<img src="images/zs2.jpg">
+								<img src="images/zs2.jpg" data-preview-group="1" data-preview-src="">
 							</a>
 						</div>
 						<!-- 第三张 -->
 						<div class="mui-slider-item">
 							<a href="#">
-								<img src="images/zs3.jpg">
+								<img src="images/zs3.jpg" data-preview-group="1"  data-preview-src="">
 							</a>
 						</div>
 
 						<!-- 第四张 -->
 						<div class="mui-slider-item">
 							<a href="#">
-								<img src="images/zs4.png">
+								<img src="images/zs4.png" data-preview-group="1" data-preview-src="">
 							</a>
 						</div>
 
@@ -156,7 +157,9 @@
 
 		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
-
+		<script src="js/mui.zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script>
 			// 页面初始化
 			gcs.init();
@@ -185,6 +188,8 @@
 				//alert($(element).text());
 			});
 
+		// 图片预览
+		mui.previewImage();
 			
 		</script>
 

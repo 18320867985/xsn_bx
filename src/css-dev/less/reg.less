@@ -41,8 +41,11 @@
             //禁用
             .create-btn(@text-ash, 28px, @w);
             //激活     
-            &.active {
+            &.vd-ok {
                 .create-btn(@text-warning, 28px, @w);
+            }
+            &.vd-ok.error {
+               .create-btn(@text-ash, 28px, @w);
             }
         }
         //相连的每一项
@@ -71,7 +74,7 @@
         transition: all .8s;
     }
     //激活的
-    .active.btn {
+    .vd-ok.btn {
         .create-btn(@text-warning, 40px, 100%);
         font-size: 16px;
     }

@@ -160,7 +160,6 @@ if ((typeof exports === "undefined" ? "undefined" : _typeof(exports)) === 'objec
 	module.exports.common = common;
 }
 
-
 mui.init({
 	swipeBack: true //启用右滑关闭功能
 });
@@ -875,9 +874,9 @@ if ((typeof exports === "undefined" ? "undefined" : _typeof(exports)) === 'objec
 				if (typeof bl === 'boolean') {
 
 					if (bl) {
-						$(".reg-submit .btn").addClass("active").removeAttr("disabled");
+						$(".reg-submit .btn").addClass("vd-ok").removeAttr("disabled");
 					} else {
-						$(".reg-submit .btn").removeClass("active").attr("disabled", "disabled");
+						$(".reg-submit .btn").removeClass("vd-ok").attr("disabled", "disabled");
 					}
 				}
 			}

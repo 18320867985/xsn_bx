@@ -1,7 +1,6 @@
 /*我要报修*/
 var baoxiu = (function($) {
 
-
 	var _init = function() {
 
 		// 日期组件

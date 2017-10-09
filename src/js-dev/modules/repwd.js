@@ -96,10 +96,10 @@
 				if(typeof bl === 'boolean') {
 
 					if(bl) {
-						$(".reg-submit .btn").addClass("active").removeAttr("disabled");
+						$(".reg-submit .btn").addClass("vd-ok").removeAttr("disabled");
 
 					} else {
-						$(".reg-submit .btn").removeClass("active").attr("disabled", "disabled")
+						$(".reg-submit .btn").removeClass("vd-ok").attr("disabled", "disabled")
 
 					}
 				}
