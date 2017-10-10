@@ -25,8 +25,7 @@
             width: 78%;
             margin: 0;
             padding: 0 10px;
-            border:none;
-          
+            border: none;
         }
         .user {
             width: 50%;
@@ -45,7 +44,7 @@
                 .create-btn(@text-warning, 28px, @w);
             }
             &.vd-ok.error {
-               .create-btn(@text-ash, 28px, @w);
+                .create-btn(@text-ash, 28px, @w);
             }
         }
         //相连的每一项
@@ -54,6 +53,7 @@
             border-top: 1px solid @text-ash-3;
         }
     }
+    
 }
 
 //协议
@@ -80,6 +80,7 @@
     }
 }
 
+
 /*重置密码*/
 
 //error错误
@@ -87,7 +88,7 @@
     position: relative;
     display: none;
     padding: 0 10px;
-    transition:  all .5s;
+    transition: all .5s;
     .error {
         padding: 0;
         color: @text-warning;
@@ -107,10 +108,9 @@
             line-height: 30px;
         }
     }
-    
     //是否显示错误框
-    &.is-show{
-        display:block;
-        transition:  all .8s;
+    &.is-show {
+        display: block;
+        transition: all .8s;
     }
 }

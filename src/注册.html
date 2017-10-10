@@ -11,13 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
 		<link rel="stylesheet" href="css/all.css" />
 		<style type="text/css">
-		.vd-box.vd-ok label{
-			color:green;
-		}
 		
-		.vd-box.vd-error label{
-			color:red;
-		}
 			
 		</style>
 
@@ -72,7 +66,7 @@
 
 			<!-- btn-->
 			<section class="reg-submit  mui-clearfix ">
-				<input class="btn  vd-btn" type="button"  name="" id="" value="注册" />
+				<input class="btn  vd-btn vd-ok" type="button"  name="" id="" value="注册" />
 			</section>
 
 		</section>
@@ -123,23 +117,10 @@
 
 				})
 				
-				// 提交按钮
-				$(".vd-btn").on("click",function(){
-					
-					// 是否验证成功
-					vd1.isSuccess(function(obj) {
-						
-						alert(JSON.stringify(obj));
-						
-					},function(obj) {
-						mui.alert(obj.errorMsg," ","确认",function(){
-						obj.el.focus();
-						});
-					
-					});	
-				});
+			
 				
 			})(window.Zepto)
+		
 		</script>
 
 	</body>

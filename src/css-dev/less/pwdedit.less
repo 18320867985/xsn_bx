@@ -3,7 +3,7 @@
 .pwdedit {
     margin-top: 10px;
     .pwdedit-form {
-        padding: 5px 10px;
+        padding: 0 10px;
         background: #fff;
         label {
             display: block;
@@ -32,8 +32,11 @@
                 border-left: 1px solid @text-ash-2 ;
                 color: @text-ash;
                 //选择
-                &.mui-active {
+                &.vd-ok {
                     color: @text-success;
+                }
+                 &.vd-ok.error {
+                     color: @text-ash;
                 }
             }
         }
@@ -57,7 +60,7 @@
         input {
             .create-btn(@text-ash, 48px, 100%, 0, 16px);
         }
-        &.active input {
+        & input.vd-ok  {
             .create-btn(@text-warning, 48px, 100%, 0, 16px);
         }
     }
