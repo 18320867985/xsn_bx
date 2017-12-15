@@ -79,7 +79,24 @@
 			var vd1=  vd.create(".login-form");
 			vd1.init();
 			  
-			
+			$(".vd-btn").on("tap", function() {
+				var $this = $(this);
+				// 成功
+				vd1.isSuccess(function(obj) {
+						alert(JSON.stringify(obj));
+						vd1.disabled($this);
+						$this.val("提交中...")
+
+					},
+
+					// 失败
+					function(obj) {
+						mui.alert(obj.errorMsg, " ", "确认", function() {
+							obj.el.focus();
+						});
+
+					});
+			});
 			// 发送验证码
 			(function($) {
 
