@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>我要报修</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
+			<h1 class="mui-title">我要报修</h1>
+			<!--列表icon-->
+			<span class="iconfont icon-liebiao text-warning"></span>
+		</header>
+
+		<!--底部-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="javascript:;">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">我要报修</span>
+			</a>
+			<a class="mui-tab-item" href="javascript:;">
+				<span class="mui-icon  iconfont icon-shenhe"></span>
+				<span class="mui-tab-label">我的投诉</span>
+			</a>
+			<a class="mui-tab-item" href="javascript:;">
+				<span class="mui-icon iconfont icon-ren-copy"></span>
+				<span class="mui-tab-label">我的资料</span>
+			</a>
+
+		</nav>
+
+		<!--主体部分-->
+		<section class="mui-content ">
+
+			<section class="baoxiu ">
+
+				<div class="form">
+
+					<div class="mui-row mui-row-group mui-clearfix vd-box">
+						<div class="mui-col-xs-2 ">
+							<label for="a" class="mui-text-muted-bs">你的姓名</label>
+						</div>
+						<div class="mui-col-xs-10">
+							<input type="text"  name="name" id="a" value="" class="vd-item mui-form-control mui-form-control-focus" 
+								vd-req vd-req-msg="姓名不能为空"
+								placeholder="输入你的姓名" />
+
+						</div>
+						<!--必填-->
+						<span class="rel-txt text-warning ">*</span>
+					</div>
+
+					<div class="mui-row mui-row-group vd-box">
+						<div class="mui-col-xs-2 ">
+							<label for="b" class="mui-text-muted-bs">手机</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="phone" 
+								class="vd-item  mui-form-control mui-form-control-focus"
+								vd-req  vd-req-msg="手机号码不能为空"
+						 		vd-pattern="^1\d{10}$" vd-pattern-msg="手机格式不对" maxlength="11" 
+						 		placeholder="输入手机号码" 
+								 />
+						</div>
+						<!--必填-->
+						<span class="rel-txt text-warning ">*</span>
+					</div>
+
+					<div class="mui-row mui-row-group vd-box">
+						<div class="mui-col-xs-2 ">
+							<label for="c" class="mui-text-muted-bs">产品名称</label>
+						</div>
+						<div class="mui-col-xs-10   relative">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class="vd-item mui-form-control mui-form-control-focus  br-no2" name="prodName" 	vd-req vd-req-msg="产品名称不能为空" >
+								<option value="1">产品名称1</option>
+								<option value="2">产品名称2</option>
+								<option value="3">产品名称3</option>
+								<option value="4">产品名称4</option>
+								<option value="5">产品名称5</option>
+							</select>
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+					</div>
+
+					<div class="mui-row mui-row-group vd-box">
+						<div class="mui-col-xs-2 ">
+							<label for="d" class="mui-text-muted-bs">预约时间</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="date" id="select-date" value=""
+								 readonly="readonly" vd-req  vd-req-msg="预约时间不能为空"
+								  class="vd-item mui-form-control mui-form-control-focus" placeholder="2017-08-12 12:45:23" />
+						</div>
+
+						<!--必填-->
+						<span class="rel-txt text-warning ">*</span>
+					</div>
+
+					<div class="mui-row mui-row-group vd-box">
+						<div class="mui-col-xs-2 ">
+							<label for="e" class="mui-text-muted-bs">服务方式</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class="vd-item mui-form-control mui-form-control-focus  br-no2" name="svcff" id="e"  vd-req vd-req-msg="服务方式不能为空" >
+								<option value="1">服务方式1</option>
+								<option value="2">服务方式2</option>
+								<option value="3">服务方式3</option>
+								<option value="4">服务方式4</option>
+
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+						<!--必填-->
+						<span class="rel-txt text-warning ">*</span>
+					</div>
+
+					<div class="mui-row mui-row-group vd-box">
+						<div class="mui-col-xs-2 ">
+							<label for="f" class="mui-text-muted-bs">问题类型</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class="vd-item mui-form-control mui-form-control-focus  br-no2" name="wttype" vd-req vd-req-msg="问题类型不能为空">
+								<option value="1">问题类型1</option>
+								<option value="2">问题类型2</option>
+								<option value="3">问题类型3</option>
+								<option value="4">问题类型4</option>
+
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+						<!--必填-->
+						<span class="rel-txt text-warning ">*</span>
+					</div>
+
+					<div class="mui-row mui-row-group vd-box">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">问题描述</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<textarea class="textare vd-item"  name="remark" rows="" cols="" vd-req vd-req-msg="问题描述不能为空"placeholder="输入问题描述"></textarea>
+						</div>
+					</div>
+
+					<div class="mui-row mui-row-group mui-clearfix ">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">故障图片</label>
+						</div>
+						<div class="mui-col-xs-10 progress-box">
+							<input class="file-up mui-form-control mui-form-control-focus" type="text" readonly name="" id="" value="" placeholder="请选择上传文件" />
+							<button class="btn-up" type="button">选择文件</button>
+
+							<input class="v-text-index" type="file" name="" id="fileUp" value="" accept="image/*" />
+							<!--进度条-->
+							<div class="progress-all v-hide ">
+								<div class="progress-now"></div>
+								<div class="progress-num v-hide">0%</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs"></label>
+						</div>
+						<div class="mui-col-xs-10  img-big">
+							<!--<img class="upload-img" src="" alt="上传图片" />-->
+						</div>
+					</div>
+
+					<div class="mui-clearfix"></div>
+
+				</div>
+
+				<div class="submit-box">
+					<button class="btn-submit vd-btn " type="button">提交报修</button>
+				</div>
+			</section>
+
+		</section>
+
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			mui.ready(function() {
+				// 页面初始化 
+				baoxiu.init();
+			});
+				
+				var FILE_MAX_COUNT=3; // 最大5张图片
+				var file_count=0;
+				// h5 上传图片
+				$(".btn-up").on("click", function() {
+					$("#fileUp").click();
+				});
+
+				$("#fileUp").change(function() {
+				
+				
+						if(file_count>=FILE_MAX_COUNT){
+							mui.alert("最大上传"+FILE_MAX_COUNT+"张图片");
+							return;
+						}
+						file_count=file_count+1;
+					fileupff(this);
+				});
+
+				var fileupff = function(obj) {
+					$(obj).parents(".progress-box").find(".progress-all").show();
+					var file = document.getElementById("fileUp").files[0];
+					h5File.upload({
+						data: file, //选择的文件
+						url: "", //上传网址
+						outTime: 30000,
+						el: $(obj), //当前element
+						size: 300000000, //1M=1000000
+						seccess: function(data) {
+							
+						createElement("images/劲爆图片.png");
+						$(obj).parents(".progress-box").find(".progress-all").hide();
+
+
+						}, //成功回调
+						error: function(data) {
+						
+							// 以下代码 测试使用  发布注释掉
+							$(obj).parents(".progress-box").find(".progress-all").hide();
+							createElement("images/劲爆图片.png");
+						} //错误回调
+
+					}); //调用上传接口
+				}
+
+				
+			//删除图片
+			function closeFn(obj) {
+				compt.confirm("是否要删除该图片？",function(){
+						//删除成功todo...
+						$(obj).parents(".upload-img-big").remove();
+						file_count=file_count-1;
+					
+				});
+				
+			}
+		
+			// 创建元素
+			function createElement(url) {
+
+				var url = url;
+				var div = document.createElement("div");
+				
+				div.className = "upload-img-big";
+				span = document.createElement("span");
+				span.innerHTML = "&times;";
+				span.setAttribute("onclick", "closeFn(this)");
+				span.classList.add("close");
+				div.appendChild(span);
+				var img = document.createElement("img");
+				img.src = url;
+				div.appendChild(img);
+				var input = document.createElement("input");
+				input.type = "text";
+				input.value = url;
+				div.appendChild(input);
+				document.querySelector(" .img-big").insertBefore(div,null);
+
+			}
+			
+			// 表单验证
+			var vd1=vd.create(".baoxiu");
+			vd1.init();
+			
+				// 提交按钮
+				$(".vd-btn").on("click",function(){
+					
+					var $this=$(this);
+					// 是否验证成功
+					vd1.isSuccess(function(obj) {
+						
+						alert(JSON.stringify(obj));
+						vd1.disabled($this);
+						$this.val("提交中...");
+						
+					},function(obj) {
+						mui.alert(obj.errorMsg," ","确认",function(){
+						obj.el.focus();
+						});
+					
+					});	
+				});
+		
+//			// 提交  遍历上传图片url
+//			$(".btn-submit").on("tap",function(e){
+//				e.preventDefault();
+//				var els=document.querySelectorAll(".upload-img-big");
+//				var urls="";
+//				els.forEach(function(item,index){
+//					urls+=$(item).find("input[type=text]").val()+"#";
+//					
+//				})
+//				
+//				//mui.alert(urls); // 遍历的值
+//			});
+
+
+			
+
+		
+			
+		</script>
+	</body>
+
+</html>

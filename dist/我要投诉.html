@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>编辑投诉</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left "></a>
+			<h1 class="mui-title">编辑投诉</h1>
+			<!--列表icon-->
+			<span class="iconfont icon-liebiao text-warning"></span>
+		</header>
+
+		<!--底部-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="javascript:;">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">我要报修</span>
+			</a>
+			<a class="mui-tab-item" href="javascript:;">
+				<span class="mui-icon  iconfont icon-shenhe"></span>
+				<span class="mui-tab-label">我的投诉</span>
+			</a>
+			<a class="mui-tab-item" href="javascript:;">
+				<span class="mui-icon iconfont icon-ren-copy"></span>
+				<span class="mui-tab-label">我的资料</span>
+			</a>
+
+		</nav>
+		
+			
+		<!--主体部分-->
+		<section class="mui-content ">
+
+			<section class="baoxiu">
+
+				<div class="form">
+
+					<div class="mui-row mui-row-group mui-clearfix">
+						<div class="mui-col-xs-2 ">
+							<label for="a" class="mui-text-muted-bs">你的姓名</label>
+						</div>
+						<div class="mui-col-xs-10">
+							<input type="text" name="" id="a" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入你的姓名" />
+
+						</div>
+						<!--必填-->
+						<span class="rel-txt text-warning ">*</span>
+					</div>
+
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="b" class="mui-text-muted-bs">手机号码</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<input type="text" name="" id="b" value="" class=" mui-form-control mui-form-control-focus" placeholder="输入手机号码" />
+						</div>
+						<!--必填-->
+						<span class="rel-txt text-warning ">*</span>
+					</div>
+
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="c" class="mui-text-muted-bs">投诉对象</label>
+						</div>
+						<div class="mui-col-xs-10   relative">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="c">
+								<option value="1">投诉对象1</option>
+								<option value="2">投诉对象2</option>
+								<option value="3">投诉对象3</option>
+								<option value="4">投诉对象4</option>
+								<option value="5">投诉对象5</option>
+							</select>
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+					</div>
+
+	
+
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="e" class="mui-text-muted-bs">投诉类型</label>
+						</div>
+						<div class="mui-col-xs-10  relative">
+							<!--<input type="text" name="" id="" value="" class=" mui-form-control mui-form-control-focus" placeholder="A" />-->
+							<select class=" mui-form-control mui-form-control-focus  br-no2" name="" id="e">
+								<option value="1">投诉类型1</option>
+								<option value="2">投诉类型2</option>
+								<option value="3">投诉类型3</option>
+								<option value="4">投诉类型4</option>
+
+							</select>
+
+							<span class="mui-icon mui-icon-arrowdown"></span>
+						</div>
+
+						<!--必填-->
+						<span class="rel-txt text-warning ">*</span>
+					</div>
+
+				
+					<div class="mui-row mui-row-group">
+						<div class="mui-col-xs-2 ">
+							<label for="" class="mui-text-muted-bs">问题描述</label>
+						</div>
+						<div class="mui-col-xs-10 ">
+							<textarea class="textare" name="" rows="" cols="" placeholder="输入问题描述"></textarea>
+						</div>
+					</div>
+
+					<div class="mui-clearfix"></div>
+
+				</div>
+
+				<div class="submit-box">
+					<button class="btn-submit " type="button">我要投诉</button>
+				</div>
+			</section>
+
+		</section>
+
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+	
+		<script>
+			mui.ready(function() {
+				// 页面初始化 
+				//baoxiu.init();
+				
+				// 提交我要投诉
+				$(".submit-box .btn-submit").on("tap",function(){
+					
+				compt.confirm("是否确认提交投诉？",function(){
+					mui.alert("todo...")
+				},["确认","取消"])
+				});
+				
+			
+			})
+		</script>
+	</body>
+
+</html>
